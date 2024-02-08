@@ -20,7 +20,7 @@ def generate_data(number: int, mean: float,
     :param mean: Average value of Gaussian random generation
     :param sigma: The standard deviation of Gaussian random generation
     :param accuracy: Precision of generated numbers in integer
-    format (e.g 100 - precision to hundredths); default - 100
+    format (e.g. 100 - precision to hundredths); default - 100
     :return: Sorted by keys map whose keys is the set of
     the generated numbers and values is respectively a number of their repetitions
     """
@@ -43,7 +43,7 @@ def approximate_plot(x_val: List[INT_OR_FLOAT], y_val: List[INT_OR_FLOAT]
     :param y_val: Array of y-axis values of initial plot
     :return: Array of y-axis numbers after approximation
     """
-    theta: np.array = np.polyfit(np.array(x_val), np.array(y_val), deg=100)
+    theta: np.array = np.polyfit(np.array(x_val), np.array(y_val), deg=150)
     model: np.poly1d = np.poly1d(theta)
     return model(x_val)
 
